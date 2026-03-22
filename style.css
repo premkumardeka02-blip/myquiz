@@ -1,0 +1,239 @@
+
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Quiz card */
+.quiz-container {
+    width: 420px;
+    margin: 80px auto;
+    padding: 25px;
+    background: rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Question animation */
+#question {
+    font-size: 22px;
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {opacity: 0; transform: translateX(-20px);}
+    to {opacity: 1; transform: translateX(0);}
+}
+
+/* Buttons */
+button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #327195;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Hover bounce */
+button:hover {
+    transform: scale(1.05);
+    background: #28bf56;
+}
+
+/* Click animation */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Correct animation */
+.correct {
+    background: #2ecc71 !important;
+    color: rgb(244, 255, 26);
+    animation: pop 0.4s ease;
+}
+
+/* Wrong animation */
+.wrong {
+    background: #e74c3c !important;
+    color: white;
+    animation: shake 0.4s;
+}
+
+/* Pop effect */
+@keyframes pop {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+/* Shake effect */
+@keyframes shake {
+    0% {transform: translateX(0);}
+    25% {transform: translateX(-5px);}
+    50% {transform: translateX(5px);}
+    75% {transform: translateX(-5px);}
+    100% {transform: translateX(0);}
+}
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #0a1837;
+    z-index: 0;
+}
+
+/* Make your UI appear above canvas */
+#start-screen,
+.quiz-container,
+#result,
+#leaderboard {
+    position: relative;
+    z-index: 1;
+}
+/* Next button style */
+#next-btn {
+    background: #6c5ce7;
+    color: white;
+    font-weight: bold;
+}
+
+#next-btn:hover {
+    background: #4834d4;
+}
+
+/* Timer pulse */
+#timer {
+    color: #ff4d4d;
+    font-weight: bold;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {opacity: 1;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+/* Result screen animation */
+#result {
+    animation: fadeIn 0.6s ease;
+}
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30vh;
+    width: 400px;
+    margin: 100px auto;
+    padding: 25px;
+    background: rgb(166, 183, 190);
+    border-radius: 15px;
+    text-align: center;
+}
+#category {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 16px;
+}
+#username {
+    width: 90%;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#leaderboard {
+    width: 400px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#leaderboard li {
+    list-style: none;
+    padding: 10px;
+    margin: 5px 0;
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+.hidden {
+    display: none;
+}    
+
+
+body {
+    margin: 0;
+    background: #0f172a;
+}
+
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+#start-screen,
+.quiz-container,
+#result,
+#leaderboard {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Floating animation */
+@keyframes floatBox {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Apply to quiz box */
+.quiz-container {
+    width: 420px;
+    margin: 80px auto;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+
+    /* Floating effect */
+    animation: floatBox 4s ease-in-out infinite;
+}
+
+.quiz-container {
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}

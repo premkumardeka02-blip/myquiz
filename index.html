@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+<div id="start-screen">
+    <h2>Enter Your Name</h2>
+
+    <input type="text" id="username" placeholder="Your Name">
+
+    <select id="category">
+        <option value="">Select Category</option>
+        <option value="general">GeneralKnowledge</option>
+        <option value="tech">Technology</option>
+        <option value="math">Mathematics</option>
+    </select>
+
+    <button onclick="startQuiz()">Start Quiz</button>
+</div>
+<div class="quiz-container hidden">
+    <h3 id="timer">Time: 60s</h3>
+    <h2 id="question">Question</h2>
+
+    <div id="answers"></div>
+
+    <button id="next-btn">Next</button>
+</div>
+
+<div id="result" class="hidden">
+    <h2>Your Score: <span id="score"></span></h2>
+    <button onclick="restartQuiz()">Restart</button>
+</div>
+<div id="leaderboard" class="hidden">
+    <h2>Leaderboard 🏆</h2>
+    <ul id="leaderboard-list"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html> 
