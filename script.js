@@ -3,18 +3,18 @@
         {
             question: "Pink city of India?",
             answers: ["Mumbai", "Jaipur", "Chennai", "Raipur"],
-            correct: 2
+            correct: 1
         },
         {
             question: "Largest planet?",
             answers: ["Earth", "Mars", "Jupiter", "Venus"],
-            correct: 3
+            correct: 2
         },
         
         {
             question: "Who is known as the missile man of India?",
             answers: ["Rohit Sharma", "A.P.J. Abdul Kalam", "Ripon Sir", "Modi"],
-            correct: 2
+            correct: 1
         },
         
         {
@@ -28,7 +28,7 @@
         {
             question: "Which language runs in browser?",
             answers: ["C", "Java", "Python", "JavaScript"],
-            correct: 2
+            correct: 3
         },
         {
             question: "What does HTML stand for?",
@@ -38,7 +38,7 @@
                 "Hyper Text Marketing Language",
                 "None"
             ],
-            correct: 2
+            correct: 1
         },
         {
             question: "Which is the mother of all programming Language?",
@@ -46,9 +46,9 @@
             correct: 1
         },
          {
-            question: "?",
+            question: "which is the easiest?",
             answers: ["C", "Java", "Python", "JavaScript"],
-            correct: 1
+            correct: 2
         },
         
     ],
@@ -62,6 +62,16 @@
         {
             question: "What is 10 × 5?",
             answers: ["50", "40", "60", "55"],
+            correct: 0
+        },
+        {
+            question: "What is 10 × 8?",
+            answers: ["50", "80", "60", "55"],
+            correct: 1
+        },
+        {
+            question: "What is 1 × 5?",
+            answers: ["5", "40", "60", "55"],
             correct: 0
         }
     ]
